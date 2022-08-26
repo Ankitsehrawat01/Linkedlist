@@ -50,5 +50,28 @@ namespace Simple_LinkedList
             }
             Console.WriteLine("\n");
         }
+        public void ReverseList()
+        {
+            Node prev = null, temp = head, next = null;
+
+            while (temp != null)
+            {
+                next = temp.Next;
+                temp.Next = prev;
+                prev = temp;
+                temp = next;
+            }
+            head = prev;
+        }
+
+        public void Display2()
+        {
+            Node temp = head;
+            while ((temp != null))
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.Next;
+            }
+        }
     }
 }

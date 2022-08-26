@@ -9,7 +9,8 @@
             {
                 Console.Write("Select Option:\n" +
                     "1) Simple LinkedList\n" +
-                    "2) LinkedList using Nodes\n");
+                    "2) LinkedList using Nodes\n" +
+                    "3) LinkedList creation by appending\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,6 +32,14 @@
                         a2.AddNode(30);
                         a2.AddNode(70);
                         a2.Display();
+                        break;
+                    case 3:
+                        LinkedList a3 = new LinkedList();
+                        a3.AddNode(70);
+                        a3.AddNode(30);
+                        a3.AddNode(56);
+                        a3.ReverseList();
+                        a3.Display2();
                         break;
                 }
             }
