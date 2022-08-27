@@ -107,5 +107,14 @@ namespace Simple_LinkedList
             Console.WriteLine("Inserted data is: " + data);
             return head;
         }
+        public Node RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.Next;
+            return this.head;
+        }
     }
 }

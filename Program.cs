@@ -11,7 +11,8 @@
                     "1) Simple LinkedList\n" +
                     "2) LinkedList using Nodes\n" +
                     "3) LinkedList creation by appending\n" +
-                    "4) Insertion at a particular position in the LinkedList\n");
+                    "4) Insertion at a particular position in the LinkedList\n" +
+                    "5) Remove first Node in the LinkedList\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -49,6 +50,16 @@
                         a4.Insertatparticularposition(2, 30);
                         a4.Display();
                          break;
+                    case 5:
+                        LinkedList a5 = new LinkedList();
+                        a5.AddNode(56);
+                        a5.AddNode(30);
+                        a5.AddNode(70);
+                        a5.Display();
+                        a5.RemoveFirstNode();
+                            Console.WriteLine("First Node is removed from the linkedlist");
+                        a5.Display();
+                        break;
                 }
             }
         }
