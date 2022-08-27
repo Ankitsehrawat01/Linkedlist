@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Simple_LinkedList
 {
+
     public class LinkedList
     {
-        Node head;
+        public Node head;
         public void AddNode(int data)
         {
             Node node = new Node(data);
@@ -72,6 +73,39 @@ namespace Simple_LinkedList
                 Console.WriteLine(temp.data + " ");
                 temp = temp.Next;
             }
+        }
+        public Node Insertatparticularposition(int position, int data)
+        {
+            if(position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.Next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                while(position-- !=0)
+                {
+                    if(position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.Next = this.head.Next;
+                        head.Next = node;
+                        break;
+                    }
+                    head = head.Next;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Position out of range");
+                }
+            }
+            Console.WriteLine("Inserted data is: " + data);
+            return head;
         }
     }
 }

@@ -10,7 +10,8 @@
                 Console.Write("Select Option:\n" +
                     "1) Simple LinkedList\n" +
                     "2) LinkedList using Nodes\n" +
-                    "3) LinkedList creation by appending\n");
+                    "3) LinkedList creation by appending\n" +
+                    "4) Insertion at a particular position in the LinkedList\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -41,6 +42,13 @@
                         a3.ReverseList();
                         a3.Display2();
                         break;
+                    case 4:
+                        LinkedList a4 = new LinkedList();
+                        a4.AddNode(56);
+                        a4.AddNode(70);
+                        a4.Insertatparticularposition(2, 30);
+                        a4.Display();
+                         break;
                 }
             }
         }
