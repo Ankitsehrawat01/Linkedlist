@@ -13,7 +13,8 @@
                     "3) LinkedList creation by appending\n" +
                     "4) Insertion at a particular position in the LinkedList\n" +
                     "5) Remove first Node in the LinkedList\n" +
-                    "6) Remove last Node in the LinkedList\n");
+                    "6) Remove last Node in the LinkedList\n" +
+                    "7) Search in the LinkedList\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -70,6 +71,14 @@
                         a6.RemoveLastNode();
                         Console.WriteLine("Last Node is removed from the linkedlist");
                         a6.Display();
+                        break;
+                    case 7:
+                        LinkedList a7 = new LinkedList();
+                        a7.AddNode(56);
+                        a7.AddNode(30);
+                        a7.AddNode(70);
+                        a7.Display();
+                        a7.Search(30);
                         break;
                 }
             }

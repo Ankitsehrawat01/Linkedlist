@@ -134,5 +134,20 @@ namespace Simple_LinkedList
             newNode.Next = null;
             return head;
         }
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Node is found : " + value);
+                    return null;
+                }
+                temp = temp.Next;
+            }
+            Console.WriteLine("{0} is not a linkedlist node", value);
+            return null;
+        }
     }
 }
